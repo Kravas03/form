@@ -1,0 +1,323 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* *RESET */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: 'Roboto';
+}
+
+.hidden {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
+
+header, footer {
+	padding: 20px;
+	font-size: 40px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+header a, footer p {
+	background-image: linear-gradient(red, yellow, black);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: rgba(0,0,0,0);
+} 
+
+footer {
+	font-size: 16px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #ccc;
+}
+
+.header-list {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+.header-list li a {
+	display: block;
+	padding: 10px 20px;
+	color: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.header-list li {
+	position: relative;
+	background: rgb(7, 63, 7);
+}
+
+.header-second-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: yellow;
+	padding: 20px 3px 3px;
+	transform: translateY(-500%);
+	transition: transform .6s ease;
+}
+
+.header-second-list li + li {
+	margin-top: 3px;
+}
+.header-list li:hover .header-second-list {
+	/* display: block; */
+	/* opacity: 1; */
+	transform: translateY(0);
+}
+
+
+/* TEST */
+.aside-menu {
+	padding-top: 78px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	max-width: 70px;
+	width: 100%;
+	background: blue;
+	overflow: hidden;
+	transition: all .4s linear;
+}
+.wrapper {
+	padding-left: 70px;
+	transition: all .4s linear;
+}
+.aside-menu:hover + .wrapper {
+	padding-left: 300px;
+}
+
+.aside-menu:hover {
+	max-width: 300px;
+}
+
+.list-test {
+	max-width: 300px;
+}
+
+.list-test li {
+	background: green;
+	margin-bottom: 3px;
+}
+.list-test li a {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	padding: 13px 15px;
+	background: yellow;
+}
+.list-test li a:hover svg {
+	transform: rotate(45deg) scale(1.55);
+}
+.list-test li span {
+	overflow: hidden;
+	border: 3px solid #000;
+	line-height: 10px;
+	padding: 2px;
+	transform: rotate(-45deg);
+}
+.list-test li svg {
+	width: 28px;
+	height: 28px;
+	fill: red;
+	transform: rotate(45deg);
+	transition: all .5s linear;
+}
+
+/* ______________ */
+.arrow {
+	margin-top: 30px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	/* background: #000; */
+	position: relative;
+}
+.arrow::before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	width: 16px;
+	height: 16px;
+	border-bottom: 2px solid red;
+	border-left: 2px solid red;
+	transform: rotate(-45deg);
+}
+
+/* .icon {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background: url('../images/linkedin.svg') no-repeat center/40px;
+} */
+
+
+.card {
+	width: 400px;
+	height: 200px;
+	margin: 30px 0 0;
+	border: 3px solid #000;
+	overflow: hidden;
+}
+.card:hover img {
+	transform: scale(1.2);
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all .4s linear;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	background: yellow;
+}
+
+.list a {
+	display: block;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	fill: red;
+	stroke: green;
+}
+
+.list a:hover .icon {
+	fill: orange;
+	stroke: blue;
+}
+
+.box {
+	background: orange;
+	min-height: 200px;
+	padding: 40px 0;
+	overflow: hidden;
+}
+
+
+
+.box-img {
+	width: 400px;
+	height: 250px;
+	/* !Правильний запис */
+	/* transform: matrix(1, 0, 0, 1, 0, 0); */
+	/* !Розшифровка запису matrix */
+	/* transform: matrix( scaleX(1), skewY(0), skewX(0), scaleY(1), translateX(0), translateY(0) ); */
+	transition: transform 1s linear;
+	/* transform-origin: 0 0 0; */
+	transform: translateX(-100%);
+}
+
+.box:hover .box-img {
+	/* transform: rotate(4turn); */
+	transform: translateX(0);
+}
+
+.test {
+	width: 100px;
+	height: 100px;
+	background: #000;
+	/* transition-property: width;
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(1,1.82,.02,-0.96); */
+	transition: width 2s ease, background 3s linear 2s;
+}
+.test:hover {
+	width: 200px;
+	background: red;
+}
+
+/* .box:hover .test {
+	width: 200px;
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.box:hover .test + br + .test {
+	transition-timing-function: linear;
+} */
