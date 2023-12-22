@@ -9,52 +9,61 @@
     <div class="wrapper">
       <div class="container">
         <div class="form-box">
-          <form action="#">
-            <div class="switch-box">
+
+          <div class="switch-box">
               <input type="checkbox" class="switch" id="log" name="log"/>
               <label for="log" class="switch-lable">
                 <span class="span1">Вход</span>
                 <span class="span2">Регистрация</span>
               </label>
             </div>
+          <form action="#">
+            
 
             <h2>Вход</h2>
 
-            <input type="login" placeholder="Введите E-mail" class="log-in" />
+            <input type="login" name="login" placeholder="Введите E-mail" class="log-in" />
 
-            <input type="password" placeholder="Пароль" class="log-in mt15" />
+            <input type="password" name="password" placeholder="Пароль" class="log-in mt15" />
             <div class="forget">
-              <input type="checkbox" id="remember" value="Запомнить меня" class="remember" />
+              <input type="checkbox" id="remember" name="remember-me" value="Запомнить меня" class="remember" />
               <label for="remember" class="remember-l">Запомнить меня</label>
               <a class="recovery" href="">Забыли пароль?</a>
             </div>
 
-            <button сlass="btn">Войти</button>
+            <button сlass="btn" id="btn">Войти</button>
 
-            <p>Еще нет аккаунта?</p>
+            <div class="create-box">
+              <p>Еще нет аккаунта?</p>
+              <a class="create" href="#">Зарегистрироваться</a>
+            </div>
 
-            <a class="create" href="#">Зарегистрироваться</a>
+            <p class="net-p">Или войдите через</p>
 
-            <p>Или войдите через</p>
-<!-- 
-            <ul>
-              <li>
-                <svg>
-                  <use></use>
-                </svg>
-              </li>
-              <li>
-                <svg>
-                  <use></use>
-                </svg>
-              </li>
-              <li>
-                <svg>
-                  <use></use>
-                </svg>
-              </li>
-            </ul> -->
           </form>
+          <ul class="svg-list">
+            <li>
+              <a href="#" >
+                <svg class="facebook-img">
+                  <use href="images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="instagram">
+                <svg class="instagram-img">
+                  <use href="images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="linkedin">
+                <svg class="linkedin-img">
+                  <use href="images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul> 
         </div>
       </div>
     </div>
